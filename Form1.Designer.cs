@@ -31,30 +31,30 @@
             label2 = new Label();
             label3 = new Label();
             groupBox1 = new GroupBox();
+            rdbTemporal = new RadioButton();
+            rdbFijo = new RadioButton();
+            txtEmpleado = new TextBox();
             groupBox2 = new GroupBox();
+            lblDeducciones = new Label();
+            lblNeto = new Label();
+            lblBruto = new Label();
+            lblEmpleados = new Label();
+            label8 = new Label();
+            label7 = new Label();
             label1 = new Label();
             label4 = new Label();
             groupBox3 = new GroupBox();
+            btnRegistrar = new Button();
+            chkTransporte = new CheckBox();
+            txtHoras = new TextBox();
+            cmbCargo = new ComboBox();
             label5 = new Label();
             label6 = new Label();
             groupBox4 = new GroupBox();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
             lstNomina = new ListBox();
-            txtEmpleado = new TextBox();
-            rdbFijo = new RadioButton();
-            rdbTemporal = new RadioButton();
-            label7 = new Label();
-            label8 = new Label();
-            lblEmpleados = new Label();
-            lblBruto = new Label();
-            lblNeto = new Label();
-            lblDeducciones = new Label();
-            cmbCargo = new ComboBox();
-            txtHoras = new TextBox();
-            chkTransporte = new CheckBox();
-            btnRegistrar = new Button();
+            btnResumen = new Button();
+            btnLimpiar = new Button();
+            btnSalir = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -93,6 +93,36 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Datos del empleado";
             // 
+            // rdbTemporal
+            // 
+            rdbTemporal.AutoSize = true;
+            rdbTemporal.Location = new Point(224, 92);
+            rdbTemporal.Name = "rdbTemporal";
+            rdbTemporal.Size = new Size(93, 24);
+            rdbTemporal.TabIndex = 5;
+            rdbTemporal.TabStop = true;
+            rdbTemporal.Text = "Temporal";
+            rdbTemporal.UseVisualStyleBackColor = true;
+            // 
+            // rdbFijo
+            // 
+            rdbFijo.AutoSize = true;
+            rdbFijo.Location = new Point(122, 92);
+            rdbFijo.Name = "rdbFijo";
+            rdbFijo.Size = new Size(54, 24);
+            rdbFijo.TabIndex = 4;
+            rdbFijo.TabStop = true;
+            rdbFijo.Text = "Fijo";
+            rdbFijo.UseVisualStyleBackColor = true;
+            // 
+            // txtEmpleado
+            // 
+            txtEmpleado.ForeColor = SystemColors.ActiveCaptionText;
+            txtEmpleado.Location = new Point(100, 46);
+            txtEmpleado.Name = "txtEmpleado";
+            txtEmpleado.Size = new Size(276, 27);
+            txtEmpleado.TabIndex = 3;
+            // 
             // groupBox2
             // 
             groupBox2.Controls.Add(lblDeducciones);
@@ -109,6 +139,60 @@
             groupBox2.TabIndex = 4;
             groupBox2.TabStop = false;
             groupBox2.Text = "Resumen";
+            // 
+            // lblDeducciones
+            // 
+            lblDeducciones.AutoSize = true;
+            lblDeducciones.Location = new Point(191, 127);
+            lblDeducciones.Name = "lblDeducciones";
+            lblDeducciones.Size = new Size(21, 20);
+            lblDeducciones.TabIndex = 8;
+            lblDeducciones.Text = "--";
+            // 
+            // lblNeto
+            // 
+            lblNeto.AutoSize = true;
+            lblNeto.Location = new Point(191, 173);
+            lblNeto.Name = "lblNeto";
+            lblNeto.Size = new Size(21, 20);
+            lblNeto.TabIndex = 7;
+            lblNeto.Text = "--";
+            // 
+            // lblBruto
+            // 
+            lblBruto.AutoSize = true;
+            lblBruto.Location = new Point(191, 82);
+            lblBruto.Name = "lblBruto";
+            lblBruto.Size = new Size(21, 20);
+            lblBruto.TabIndex = 6;
+            lblBruto.Text = "--";
+            // 
+            // lblEmpleados
+            // 
+            lblEmpleados.AutoSize = true;
+            lblEmpleados.Location = new Point(191, 37);
+            lblEmpleados.Name = "lblEmpleados";
+            lblEmpleados.Size = new Size(21, 20);
+            lblEmpleados.TabIndex = 5;
+            lblEmpleados.Text = "--";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(15, 173);
+            label8.Name = "label8";
+            label8.Size = new Size(79, 20);
+            label8.TabIndex = 4;
+            label8.Text = "Total neto:";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(15, 127);
+            label7.Name = "label7";
+            label7.Size = new Size(132, 20);
+            label7.TabIndex = 3;
+            label7.Text = "Total deducciones:";
             // 
             // label1
             // 
@@ -143,6 +227,41 @@
             groupBox3.TabStop = false;
             groupBox3.Text = "Registro de pago";
             // 
+            // btnRegistrar
+            // 
+            btnRegistrar.Location = new Point(96, 242);
+            btnRegistrar.Name = "btnRegistrar";
+            btnRegistrar.Size = new Size(221, 41);
+            btnRegistrar.TabIndex = 6;
+            btnRegistrar.Text = "Registrar Empleados";
+            btnRegistrar.UseVisualStyleBackColor = true;
+            btnRegistrar.Click += btnRegistrar_Click;
+            // 
+            // chkTransporte
+            // 
+            chkTransporte.AutoSize = true;
+            chkTransporte.Location = new Point(19, 175);
+            chkTransporte.Name = "chkTransporte";
+            chkTransporte.Size = new Size(233, 24);
+            chkTransporte.TabIndex = 5;
+            chkTransporte.Text = "Recibe incentivo de transporte";
+            chkTransporte.UseVisualStyleBackColor = true;
+            // 
+            // txtHoras
+            // 
+            txtHoras.Location = new Point(15, 115);
+            txtHoras.Name = "txtHoras";
+            txtHoras.Size = new Size(97, 27);
+            txtHoras.TabIndex = 4;
+            // 
+            // cmbCargo
+            // 
+            cmbCargo.FormattingEnabled = true;
+            cmbCargo.Location = new Point(86, 30);
+            cmbCargo.Name = "cmbCargo";
+            cmbCargo.Size = new Size(231, 28);
+            cmbCargo.TabIndex = 3;
+            // 
             // label5
             // 
             label5.AutoSize = true;
@@ -171,174 +290,59 @@
             groupBox4.TabStop = false;
             groupBox4.Text = "Nomina registrada";
             // 
-            // button1
-            // 
-            button1.Location = new Point(85, 467);
-            button1.Name = "button1";
-            button1.Size = new Size(192, 44);
-            button1.TabIndex = 5;
-            button1.Text = "Mostrar resumen";
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            button2.Location = new Point(356, 467);
-            button2.Name = "button2";
-            button2.Size = new Size(153, 40);
-            button2.TabIndex = 6;
-            button2.Text = "Limpiar";
-            button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            button3.Location = new Point(583, 467);
-            button3.Name = "button3";
-            button3.Size = new Size(152, 40);
-            button3.TabIndex = 7;
-            button3.Text = "Salir";
-            button3.UseVisualStyleBackColor = true;
-            // 
             // lstNomina
             // 
             lstNomina.FormattingEnabled = true;
-            lstNomina.Location = new Point(27, 33);
+            lstNomina.Location = new Point(6, 26);
             lstNomina.Name = "lstNomina";
-            lstNomina.Size = new Size(259, 164);
+            lstNomina.Size = new Size(299, 164);
             lstNomina.TabIndex = 0;
             // 
-            // txtEmpleado
+            // btnResumen
             // 
-            txtEmpleado.ForeColor = SystemColors.ControlDark;
-            txtEmpleado.Location = new Point(100, 46);
-            txtEmpleado.Name = "txtEmpleado";
-            txtEmpleado.Size = new Size(276, 27);
-            txtEmpleado.TabIndex = 3;
-            txtEmpleado.Text = "Ej.: Ronald";
+            btnResumen.Location = new Point(85, 467);
+            btnResumen.Name = "btnResumen";
+            btnResumen.Size = new Size(192, 44);
+            btnResumen.TabIndex = 5;
+            btnResumen.Text = "Mostrar resumen";
+            btnResumen.UseVisualStyleBackColor = true;
+            btnResumen.Click += btnResumen_Click;
             // 
-            // rdbFijo
+            // btnLimpiar
             // 
-            rdbFijo.AutoSize = true;
-            rdbFijo.Location = new Point(122, 92);
-            rdbFijo.Name = "rdbFijo";
-            rdbFijo.Size = new Size(54, 24);
-            rdbFijo.TabIndex = 4;
-            rdbFijo.TabStop = true;
-            rdbFijo.Text = "Fijo";
-            rdbFijo.UseVisualStyleBackColor = true;
+            btnLimpiar.Location = new Point(356, 467);
+            btnLimpiar.Name = "btnLimpiar";
+            btnLimpiar.Size = new Size(153, 40);
+            btnLimpiar.TabIndex = 6;
+            btnLimpiar.Text = "Limpiar";
+            btnLimpiar.UseVisualStyleBackColor = true;
+            btnLimpiar.Click += btnLimpiar_Click;
             // 
-            // rdbTemporal
+            // btnSalir
             // 
-            rdbTemporal.AutoSize = true;
-            rdbTemporal.Location = new Point(224, 92);
-            rdbTemporal.Name = "rdbTemporal";
-            rdbTemporal.Size = new Size(93, 24);
-            rdbTemporal.TabIndex = 5;
-            rdbTemporal.TabStop = true;
-            rdbTemporal.Text = "Temporal";
-            rdbTemporal.UseVisualStyleBackColor = true;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(15, 127);
-            label7.Name = "label7";
-            label7.Size = new Size(132, 20);
-            label7.TabIndex = 3;
-            label7.Text = "Total deducciones:";
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Location = new Point(15, 173);
-            label8.Name = "label8";
-            label8.Size = new Size(79, 20);
-            label8.TabIndex = 4;
-            label8.Text = "Total neto:";
-            // 
-            // lblEmpleados
-            // 
-            lblEmpleados.AutoSize = true;
-            lblEmpleados.Location = new Point(264, 37);
-            lblEmpleados.Name = "lblEmpleados";
-            lblEmpleados.Size = new Size(21, 20);
-            lblEmpleados.TabIndex = 5;
-            lblEmpleados.Text = "--";
-            // 
-            // lblBruto
-            // 
-            lblBruto.AutoSize = true;
-            lblBruto.Location = new Point(264, 82);
-            lblBruto.Name = "lblBruto";
-            lblBruto.Size = new Size(21, 20);
-            lblBruto.TabIndex = 6;
-            lblBruto.Text = "--";
-            // 
-            // lblNeto
-            // 
-            lblNeto.AutoSize = true;
-            lblNeto.Location = new Point(264, 173);
-            lblNeto.Name = "lblNeto";
-            lblNeto.Size = new Size(21, 20);
-            lblNeto.TabIndex = 7;
-            lblNeto.Text = "--";
-            // 
-            // lblDeducciones
-            // 
-            lblDeducciones.AutoSize = true;
-            lblDeducciones.Location = new Point(264, 127);
-            lblDeducciones.Name = "lblDeducciones";
-            lblDeducciones.Size = new Size(21, 20);
-            lblDeducciones.TabIndex = 8;
-            lblDeducciones.Text = "--";
-            // 
-            // cmbCargo
-            // 
-            cmbCargo.FormattingEnabled = true;
-            cmbCargo.Location = new Point(86, 30);
-            cmbCargo.Name = "cmbCargo";
-            cmbCargo.Size = new Size(231, 28);
-            cmbCargo.TabIndex = 3;
-            // 
-            // txtHoras
-            // 
-            txtHoras.Location = new Point(15, 115);
-            txtHoras.Name = "txtHoras";
-            txtHoras.Size = new Size(97, 27);
-            txtHoras.TabIndex = 4;
-            // 
-            // chkTransporte
-            // 
-            chkTransporte.AutoSize = true;
-            chkTransporte.Location = new Point(19, 175);
-            chkTransporte.Name = "chkTransporte";
-            chkTransporte.Size = new Size(233, 24);
-            chkTransporte.TabIndex = 5;
-            chkTransporte.Text = "Recibe incentivo de transporte";
-            chkTransporte.UseVisualStyleBackColor = true;
-            // 
-            // btnRegistrar
-            // 
-            btnRegistrar.Location = new Point(96, 242);
-            btnRegistrar.Name = "btnRegistrar";
-            btnRegistrar.Size = new Size(221, 41);
-            btnRegistrar.TabIndex = 6;
-            btnRegistrar.Text = "Registrar Empleados";
-            btnRegistrar.UseVisualStyleBackColor = true;
+            btnSalir.Location = new Point(583, 467);
+            btnSalir.Name = "btnSalir";
+            btnSalir.Size = new Size(152, 40);
+            btnSalir.TabIndex = 7;
+            btnSalir.Text = "Salir";
+            btnSalir.UseVisualStyleBackColor = true;
+            btnSalir.Click += btnSalir_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(810, 519);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(btnSalir);
+            Controls.Add(btnLimpiar);
+            Controls.Add(btnResumen);
             Controls.Add(groupBox3);
             Controls.Add(groupBox4);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Name = "Form1";
             Text = "Nomina Quincenal";
+            Load += Form1_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
@@ -362,9 +366,9 @@
         private Label label6;
         private GroupBox groupBox4;
         private ListBox lstNomina;
-        private Button button1;
-        private Button button2;
-        private Button button3;
+        private Button btnResumen;
+        private Button btnLimpiar;
+        private Button btnSalir;
         private RadioButton rdbTemporal;
         private RadioButton rdbFijo;
         private TextBox txtEmpleado;
